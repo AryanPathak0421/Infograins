@@ -7,7 +7,7 @@ const OfficeLocations = () => {
     <section className="services-provide-sec" style={{ backgroundColor: 'var(--bg-light)', padding: '60px 0' }}>
       <div className="container">
         <h2 className="home-sec-title">Our Global Offices</h2>
-        <div className="services-provide-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))' }}>
+        <div className="services-provide-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
           {/* India Head Office */}
           <Card className="hover-lift" style={{ textAlign: 'left', padding: '30px' }}>
             <div className="pillar-icon-circle" style={{ width: '48px', height: '48px', fontSize: '18px' }}>
