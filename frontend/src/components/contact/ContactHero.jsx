@@ -1,11 +1,12 @@
 import React from 'react'
+import bgImg from '../../assets/london-cityscape.jpg'
 
 const ContactHero = () => {
   return (
     <section className="contact-banner-sec animate-fade-in">
       <div className="contact-banner-bg">
         <img
-          src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&h=400&fit=crop"
+          src={bgImg}
           alt="Contact us banner background"
           className="contact-banner-img"
         />
@@ -22,3 +23,4 @@ const ContactHero = () => {
 }
 
 export default ContactHero
+

@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import londonImg from '../../Golden Hour at Westminster.jpg.jpeg'
-import usaImg from '../../Golden Hour Empire State Building New York Cityscape Wallpaper 4K - WallpaperScapes.jpg.jpeg'
-import indiaImg from '../../Top 18 Things to Do in Mumbai.jpg.jpeg'
+import londonImg from '../../assets/london-cityscape.jpg'
+import usaImg from '../../assets/new-york-cityscape.jpg'
+import indiaImg from '../../assets/mumbai-cityscape.jpg'
+import uaeImg from '../../assets/dubai-cityscape.jpg'
 
 const GlobalPresence = () => {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -14,13 +15,18 @@ const GlobalPresence = () => {
     },
     {
       country: 'USA',
-      city: 'Dallas',
+      city: 'New York',
       image: usaImg
     },
     {
       country: 'India',
-      city: 'Indore',
+      city: 'Mumbai',
       image: indiaImg
+    },
+    {
+      country: 'UAE',
+      city: 'Dubai',
+      image: uaeImg
     }
   ]
 

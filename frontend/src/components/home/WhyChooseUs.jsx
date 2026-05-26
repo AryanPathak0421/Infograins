@@ -1,4 +1,6 @@
 import React from 'react'
+import expertMaleImg from '../../assets/generic-team.jpg'
+import expertFemaleImg from '../../assets/generic-office.jpg'
 
 const WhyChooseUs = () => {
   return (
@@ -20,15 +22,15 @@ const WhyChooseUs = () => {
             {/* Main Overlapping Team Photos */}
             <div className="photo-main-box">
               <img
-                src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=350&h=350&fit=crop"
-                alt="Male Expert Professional"
+                src={expertMaleImg}
+                alt="Expert Professional Team"
                 className="img-expert-male"
               />
             </div>
             <div className="photo-secondary-box">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=350&fit=crop"
-                alt="Female Expert Professional"
+                src={expertFemaleImg}
+                alt="Expert Professional Office"
                 className="img-expert-female"
               />
             </div>
@@ -86,3 +88,4 @@ const WhyChooseUs = () => {
 }
 
 export default WhyChooseUs
+
