@@ -205,7 +205,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  padding: 14px 20px;
+  padding: 18px 20px;
   cursor: pointer;
   transition: var(--transition-fast);
   text-transform: uppercase;
@@ -947,31 +947,64 @@
 /* Sticky horizontal tabs under services banner */
 .services-tabs-bar {
   background-color: var(--white);
-  border-bottom: 1px solid var(--border-grey);
-  box-shadow: var(--shadow-sm);
+  border-bottom: 2px solid var(--border-grey);
   overflow-x: auto;
   white-space: nowrap;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  z-index: 100;
+}
+
+/* When tabs become sticky (sticks below the main navbar on scroll) */
+.services-tabs-bar.tabs-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  animation: slideDownTabs 0.35s ease-out;
+  z-index: 998;
+}
+
+@keyframes slideDownTabs {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Spacer injected when tabs go sticky to prevent content jump */
+.services-tabs-bar.tabs-sticky + .services-sticky-stack {
+  padding-top: 60px;
 }
 
 .tabs-flex {
   display: flex;
-  justify-content: space-between;
-  padding: 0;
+  justify-content: center;
 }
 
 .tab-item-btn {
   background: none;
   border: none;
-  padding: 16px 20px;
+  border-bottom: 3px solid transparent;
+  padding: 16px 22px;
   font-size: 13px;
   font-weight: 600;
+  font-family: 'Inter', sans-serif;
   color: var(--text-dark);
   cursor: pointer;
-  transition: var(--transition-fast);
+  transition: all 0.3s ease;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
   flex: 1;
   border-right: 1px solid var(--border-grey);
   outline: none;
+  position: relative;
+  white-space: nowrap;
 }
 
 .tab-item-btn:last-child {
@@ -979,17 +1012,81 @@
 }
 
 .tab-item-btn:hover {
-  background-color: var(--bg-light);
+  background-color: rgba(0, 0, 0, 0.03);
+  color: var(--primary-red);
 }
 
+/* Active tab — bold bottom border indicator (like the reference image) */
 .active-tab-item {
-  background-color: var(--primary-red);
-  color: var(--white);
+  color: var(--primary-red);
   font-weight: 700;
+  border-bottom: 3px solid var(--primary-red);
+  background-color: rgba(160, 26, 38, 0.04);
 }
 
 .active-tab-item:hover {
+  background-color: rgba(160, 26, 38, 0.06);
+  color: var(--primary-red);
+}
+
+/* ---- Stacking Sticky Service Sections ---- */
+.services-sticky-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-bottom: 40px;
+}
+
+.service-sticky-section {
+  padding: 50px 0;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-grey);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.service-sticky-section:last-child {
+  border-bottom: none;
+}
+
+/* Subtle entrance animation for active section */
+.service-block-stacked {
+  opacity: 0.85;
+  transition: all 0.4s ease;
+}
+
+.service-block-active {
+  opacity: 1;
+  box-shadow: 0 8px 30px rgba(160, 26, 38, 0.08);
+  border-color: var(--primary-red);
+}
+
+/* ---- Service Tag Chips ---- */
+.service-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.service-tag-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary-red);
+  background-color: rgba(160, 26, 38, 0.06);
+  border: 1px solid rgba(160, 26, 38, 0.15);
+  border-radius: 20px;
+  letter-spacing: 0.2px;
+  transition: all 0.25s ease;
+}
+
+.service-tag-chip:hover {
   background-color: var(--primary-red);
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(160, 26, 38, 0.25);
 }
 
 /* Vertical Services list */
@@ -1306,29 +1403,94 @@
   margin-bottom: 40px;
 }
 
-.about-global-presence-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
-.global-presence-building-card {
-  border-radius: 12px;
+.global-presence-wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--border-grey);
-  height: 380px;
+  box-shadow: var(--shadow-xl);
+  background-color: #000;
 }
 
-.building-img {
+/* Background image cross-fade slides */
+.presence-bg-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: var(--transition-normal);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  z-index: 1;
 }
 
-.global-presence-building-card:hover .building-img {
-  transform: scale(1.03);
+.presence-bg-slide.active {
+  opacity: 1;
+}
+
+/* Column Container and Columns */
+.presence-cols-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.presence-col {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  transition: background-color 0.4s ease, background 0.4s ease;
+  /* Dark overlay by default */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.presence-col:last-child {
+  border-right: none;
+}
+
+/* Reddish active overlay when hovered */
+.presence-col:hover {
+  background: linear-gradient(to top, rgba(163, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+.presence-col-content {
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  pointer-events: none; /* so text doesn't interfere with mouseenter */
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.presence-col:hover .presence-col-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.presence-country {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.presence-city {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.9;
 }
 
 /* ==========================================
@@ -1843,15 +2005,28 @@
   }
 
   .tabs-flex {
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0;
+    justify-content: flex-start;
+    scrollbar-width: none;
+  }
+
+  .tabs-flex::-webkit-scrollbar {
+    display: none;
   }
 
   .tab-item-btn {
-    padding: 10px 15px;
-    font-size: 13px;
+    padding: 12px 16px;
+    font-size: 11px;
     white-space: nowrap;
+    flex: 0 0 auto;
+    min-width: max-content;
+  }
+
+  .service-sticky-section {
+    padding: 30px 0;
   }
   
   .service-block-frame {
@@ -1864,7 +2039,28 @@
     gap: 30px;
   }
   
-  .about-global-presence-grid,
+  .presence-cols-container {
+    flex-direction: column;
+  }
+  
+  .global-presence-wrapper {
+    height: 600px;
+  }
+  
+  .presence-col {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 24px;
+  }
+  
+  .presence-col:last-child {
+    border-bottom: none;
+  }
+  
+  .presence-country {
+    font-size: 22px;
+  }
+
   .bottom-dual-cards-grid {
     grid-template-columns: 1fr;
   }

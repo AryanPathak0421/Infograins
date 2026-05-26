@@ -1,7 +1,6 @@
 import React from 'react'
 import ServiceHero from '../components/services/ServiceHero'
 import ServiceDetails from '../components/services/ServiceDetails'
-import ServicesGrid from '../components/services/ServicesGrid'
 import ConsultationBanner from '../components/services/ConsultationBanner'
 
 const Services = () => {
@@ -10,13 +9,12 @@ const Services = () => {
       {/* Dynamic top banner with solutions trigger */}
       <ServiceHero />
 
-      {/* Dynamic interactive selector tabs and highlighted preview panel */}
+      {/* Sticky scroll-based service sections with tab navigation */}
       <ServiceDetails />
 
-      {/* Main vertical catalog frames displaying custom red borders */}
+      {/* Bottom promo cards */}
       <section className="vertical-services-sec">
         <div className="container">
-          <ServicesGrid />
           <ConsultationBanner />
         </div>
       </section>
