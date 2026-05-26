@@ -1,6 +1,6 @@
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
-║                  ✨ INFOGRAINS WEBSITE PROJECT COMPLETE ✨                   ║
+║                  ✨ ApTaxLedger Solution WEBSITE PROJECT COMPLETE ✨                   ║
 ║                                                                              ║
 ║                    React 18 + Vite Professional Website                     ║
 ║              For Accounting, Outsourcing, Consulting & IT Services          ║
@@ -10,7 +10,7 @@
 📁 PROJECT STRUCTURE
 ═══════════════════════════════════════════════════════════════════════════════
 
-Infograins/
+ApTaxLedger Solution/
 │
 ├── 📂 frontend/                   ← React Components & Styles
 │   ├── App.jsx                    (Main application)
@@ -67,7 +67,7 @@ Infograins/
 ═══════════════════════════════════════════════════════════════════════════════
 
 Step 1: Install Dependencies
-   cd d:\Practice-Projects\Infograins
+   cd d:\Practice-Projects\ApTaxLedger Solution
    npm install
 
 Step 2: Start Development Server
@@ -418,10 +418,10 @@ SEO Ready:          ⭐⭐⭐⭐
 🎉 YOU'RE ALL SET!
 ═══════════════════════════════════════════════════════════════════════════════
 
-Your professional Infograins website is ready to use!
+Your professional ApTaxLedger Solution website is ready to use!
 
 START HERE:
-   cd d:\Practice-Projects\Infograins
+   cd d:\Practice-Projects\ApTaxLedger Solution
    npm install
    npm run dev
 
@@ -445,5 +445,5 @@ READ THE DOCS:
 
 ═══════════════════════════════════════════════════════════════════════════════
 
-© 2024 Infograins. All Rights Reserved.
+© 2024 ApTaxLedger Solution. All Rights Reserved.
 Built with ❤️ for premium business solutions.

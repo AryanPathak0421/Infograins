@@ -1,10 +1,10 @@
-🎉 **INFOGRAINS WEBSITE - REACT + VITE PROJECT COMPLETE** 🎉
+🎉 **ApTaxLedger Solution WEBSITE - REACT + VITE PROJECT COMPLETE** 🎉
 
 ═══════════════════════════════════════════════════════════════════════════
 
 ## ✨ PROJECT SUMMARY
 
-A premium, professional corporate website for Infograins - an accounting, 
+A premium, professional corporate website for ApTaxLedger Solution - an accounting, 
 outsourcing, consulting, and IT services company. Built with React 18 and 
 Vite for maximum performance.
 
@@ -32,7 +32,7 @@ Vite for maximum performance.
 
 ## 📁 FILE STRUCTURE
 
-Infograins/
+ApTaxLedger Solution/
 ├── frontend/                     ← React components
 │   ├── App.jsx
 │   ├── main.jsx
@@ -63,7 +63,7 @@ Infograins/
 
 Step 1: Install dependencies
 ```bash
-cd d:\Practice-Projects\Infograins
+cd d:\Practice-Projects\ApTaxLedger Solution
 npm install
 ```
 
@@ -349,7 +349,7 @@ For help:
 
 ## 📄 LICENSE
 
-© 2024 Infograins. All Rights Reserved.
+© 2024 ApTaxLedger Solution. All Rights Reserved.
 
 ═══════════════════════════════════════════════════════════════════════════
 

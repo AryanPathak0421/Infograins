@@ -1,4 +1,4 @@
-# 🎉 INFOGRAINS REACT + VITE PROJECT - COMPLETION SUMMARY
+# 🎉 ApTaxLedger Solution REACT + VITE PROJECT - COMPLETION SUMMARY
 
 ## ✅ PROJECT DELIVERY COMPLETE
 
@@ -97,7 +97,7 @@
 
 ### Installation
 ```bash
-cd d:\Practice-Projects\Infograins
+cd d:\Practice-Projects\ApTaxLedger Solution
 npm install
 ```
 
@@ -501,7 +501,7 @@ This project is:
 
 ## 🎉 YOU'RE ALL SET!
 
-Your professional Infograins website is ready to customize and deploy.
+Your professional ApTaxLedger Solution website is ready to customize and deploy.
 
 ### Get Started Now:
 ```bash
@@ -517,4 +517,4 @@ Happy coding! 🚀
 
 **Built with ❤️ for premium business solutions**
 
-© 2024 Infograins. All Rights Reserved.
+© 2024 ApTaxLedger Solution. All Rights Reserved.

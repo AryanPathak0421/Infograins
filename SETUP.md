@@ -1,8 +1,8 @@
-# 🚀 Infograins React + Vite Website - Quick Start Guide
+# 🚀 ApTaxLedger Solution React + Vite Website - Quick Start Guide
 
 ## Project Overview
 
-A **premium, modern corporate website** for Infograins - an accounting, outsourcing, consulting, and IT services company.
+A **premium, modern corporate website** for ApTaxLedger Solution - an accounting, outsourcing, consulting, and IT services company.
 
 **Built with:** React 18 + Vite + CSS3
 
@@ -12,7 +12,7 @@ A **premium, modern corporate website** for Infograins - an accounting, outsourc
 
 ### Step 1: Install Dependencies
 ```bash
-cd d:\Practice-Projects\Infograins
+cd d:\Practice-Projects\ApTaxLedger Solution
 npm install
 ```
 
@@ -41,7 +41,7 @@ npm run preview
 ## 📁 Project Structure
 
 ```
-Infograins/
+ApTaxLedger Solution/
 ├── frontend/
 │   ├── App.jsx                    # Main component
 │   ├── main.jsx                   # React entry point

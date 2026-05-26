@@ -1,11 +1,12 @@
 import React from 'react'
+import officeImg from '../../assets/generic-office.jpg'
 
 const AboutHero = () => {
   return (
     <section className="about-banner-sec animate-fade-in">
       <div className="about-banner-bg">
         <img
-          src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&h=400&fit=crop"
+          src={officeImg}
           alt="About us background"
           className="about-banner-img"
         />
@@ -22,3 +23,4 @@ const AboutHero = () => {
 }
 
 export default AboutHero
+

@@ -1,4 +1,4 @@
-# Infograins - CSS Styling Guide
+# ApTaxLedger Solution - CSS Styling Guide
 
 ## CSS Architecture
 

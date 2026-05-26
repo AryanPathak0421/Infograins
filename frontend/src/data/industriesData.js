@@ -1,10 +1,14 @@
+import accountingServicesImg from '../assets/accounting-services.jpg'
+import dubaiCityscapeImg from '../assets/dubai-cityscape.jpg'
+import genericTeamImg from '../assets/generic-team.jpg'
+
 export const industries = [
   {
     id: 1,
     type: 'photo',
     title: 'CPA Firms',
     description: 'Global resource management & tax compliance solutions for accounting professionals.',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=400&fit=crop',
+    image: accountingServicesImg,
     actionIcon: 'fa-solid fa-arrow-right'
   },
   {
@@ -19,7 +23,7 @@ export const industries = [
     type: 'photo',
     title: 'Real Estate',
     description: 'Comprehensive outsourcing for real estate operations, property management, and asset development.',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&h=400&fit=crop',
+    image: dubaiCityscapeImg,
     actionIcon: 'fa-solid fa-arrow-right'
   },
   {
@@ -34,7 +38,7 @@ export const industries = [
     type: 'photo',
     title: 'SMEs',
     description: 'Tailored consulting and financial outsourcing designed to elevate small and medium enterprise productivity.',
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=400&fit=crop',
+    image: genericTeamImg,
     actionIcon: 'fa-solid fa-arrow-right'
   },
   {

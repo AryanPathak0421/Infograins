@@ -1,4 +1,4 @@
-export const BRAND_NAME = 'Infograins'
+export const BRAND_NAME = 'ApTaxLedger Solution'
 export const BRAND_TAGLINE = "Let's think Beyond IT"
 
 export const CONTACT_INFO = {

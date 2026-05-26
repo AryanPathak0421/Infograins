@@ -1,9 +1,9 @@
-# 📋 Infograins Project - Complete File Reference
+# 📋 ApTaxLedger Solution Project - Complete File Reference
 
 ## 📁 Project Structure Map
 
 ```
-d:\Practice-Projects\Infograins/
+d:\Practice-Projects\ApTaxLedger Solution/
 │
 ├── 📄 index.html                    ← Main HTML entry point
 ├── 📄 vite.config.js                ← Vite build configuration

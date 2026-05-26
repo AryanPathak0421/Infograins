@@ -1,4 +1,4 @@
-# Infograins - Premium Corporate Website
+# ApTaxLedger Solution - Premium Corporate Website
 
 A modern, professional corporate website built with **React** and **Vite** for accounting, outsourcing, consulting, and IT services.
 
@@ -64,7 +64,7 @@ A modern, professional corporate website built with **React** and **Vite** for a
 ## Project Structure
 
 ```
-infograins/
+ApTaxLedger Solution/
 ├── frontend/
 │   ├── App.jsx                 # Main app component
 │   ├── main.jsx               # Entry point
@@ -207,13 +207,13 @@ Replace image URLs in components:
 ## Contact & Support
 
 For inquiries:
-- Email: hello@infograins.com
+- Email: hello@ApTaxLedger Solution.com
 - Phone: +1-800-123456
 - Address: 123 Business Avenue, NY 10001
 
 ## License
 
-© 2024 Infograins. All Rights Reserved.
+© 2024 ApTaxLedger Solution. All Rights Reserved.
 
 ## Future Enhancements
 
